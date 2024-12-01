@@ -19,7 +19,7 @@ public class ConcurrencyLimit {
         execute(limiter,20);
     }
 
-    private static String printProductInfo(int id){
+    public static String printProductInfo(int id){
         String product = Client.getProduct(id);
         log.info("Product {} has been acquired. Info => {}", id, product);
         return product;
