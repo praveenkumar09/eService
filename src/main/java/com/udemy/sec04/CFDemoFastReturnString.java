@@ -9,14 +9,16 @@ import java.util.concurrent.Executors;
 
 import static java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor;
 
-public class CFDemoReturnString {
+public class CFDemoFastReturnString {
 
-    private static final Logger log = LoggerFactory.getLogger(CFDemoReturnString.class);
+    private static final Logger log = LoggerFactory.getLogger(CFDemoFastReturnString.class);
 
     public static void main(String[] args) {
+        log.info("Main thread started");
         ExecutorService executorService = newVirtualThreadPerTaskExecutor();
         CompletableFuture<String> returnString = fastTask(executorService);
         log.info("Return String: {}", returnString.join());
+        log.info("Main thread ended");
     }
 
     private static CompletableFuture<String> fastTask(ExecutorService executorService){
