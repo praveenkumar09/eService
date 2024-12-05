@@ -1,7 +1,6 @@
-package com.udemy;
+package com.udemy.sec06;
 
 import com.udemy.sec03.Airfare;
-import com.udemy.sec06.SCCancelOnFailure;
 import com.udemy.utils.CommonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
